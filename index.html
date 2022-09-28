@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" comment="Developed by Pedro Henestroza">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arch</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script>
+      const smoothScroll = (id) => {
+        id.scrollIntoView();
+      }
+    </script>
+    <header class="header">
+      <h1 class="logo">
+        <a href="/">Arch</a>
+      </h1>
+      <nav class="navbar">
+        <p class="navbar__item" onclick="smoothScroll(document.getElementById('section-2'))">Projects</p>
+        <p class="navbar__item" onclick="smoothScroll(document.getElementById('section-3'))">About</p>
+        <p class="navbar__item" onclick="smoothScroll(document.getElementById('section-4'))">Contact</p>
+      </nav>
+    </header>
+    <section id="section-1" class="section-1">
+      <div class="filter"></div>
+      <div class="intro">
+        <h2 class="intro__title">You just imagine</h2>
+        <p class="intro__desc">We'll create it</p>
+      </div>
+    </section>
+    <section id="section-2" class="section-2">
+      <div class="section-2__item project-1">
+        <div class="section-2__item-filter"></div>
+        <div class="item-text">
+          <h3>Ender space</h3>
+          <p>MMO sci-fy game developed alongside EA Games</p>
+        </div>
+      </div>
+      <div class="section-2__item project-2">
+        <div class="section-2__item-filter"></div>
+        <div class="item-text">
+          <h3>Final Fantasy Z</h3>
+          <p>The legendary saga continues. Art design</p>
+        </div>
+      </div>
+      <div class="section-2__item project-3">
+        <div class="section-2__item-filter"></div>
+        <div class="item-text">
+          <h3>FIFA 23</h3>
+          <p>World class soccer. Stadium designs and concepts</p>
+        </div>
+      </div>
+      <div class="section-2__item project-4">
+        <div class="section-2__item-filter"></div>
+        <div class="item-text">
+          <h3>2 fast 2 furious</h3>
+          <p>Bringing the movie to your console. Car designs</p>
+        </div>
+      </div>
+    </section>
+    <section id="section-3" class="section-3">
+      <h3 class="about">
+        <span class="about-arch">Arch</span> is a design studio specializing in
+        3D rendering and modeling
+      </h3>
+    </section>
+    <section id="section-4" class="section-4">
+      <h3 class="contact">In touch</h3>
+      <form action="" onsubmit="" class="contact-form">
+        <div class="form__section-1">
+          <input
+            type="text"
+            class="contact__text contact-name"
+            placeholder="name"
+            required="true"
+          />
+          <input
+            type="email"
+            class="contact__text contact-email"
+            placeholder="email"
+            required="true"
+          />
+        </div>
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          class="contact-textarea"
+          placeholder="your message"
+          required="true"
+        ></textarea>
+        <input type="submit" class="send" value="send" />
+      </form>
+    </section>
+    <footer class="footer">
+      <div class="about"></div>
+      <div class="copyright"></div>
+    </footer>
+  </body>
+</html>
