@@ -98,6 +98,7 @@ a{
 .section-1{
     height: 100vh;
     background-image: url(./media/intro.jpg);
+    background-position: center;
     background-size: cover;
     background-attachment: fixed;
     color: white;
@@ -128,6 +129,7 @@ a{
 
 .intro__title{
     font-size: 4rem;
+    line-height: 4rem;
 }
 
 .intro__desc{
@@ -410,7 +412,11 @@ a{
     }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 500px){
+    .intro__title{
+        line-height: 4rem;
+        line-height-step: 4rem;
+    }
     .navbar__item{
         margin: 0 .3rem 0;
     }
