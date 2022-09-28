@@ -20,18 +20,53 @@ html {
     scroll-behavior: smooth;
   }
 
+.loader{
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: move-up-disappear 1s 3s forwards ease-in;
+}
+
+.loader-logo{
+    font-size: 8rem;
+    color: white;
+    opacity: 0;
+    animation: appear 2s .3s forwards ease-in-out;
+}
+
+@keyframes move-up-disappear {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+.main{
+    overflow-x: hidden;
+    display: none;
+    opacity: 0;
+    animation: appear 1s forwards;
+}
+
 .header{
     position: absolute;
     // color: rgb(171, 168, 168);
     color: white;
     top: 0;
     height: 6rem;
-    width: 100vw;
+    width: 99vw;
+    overflow-x: hidden;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 3rem 0rem;
+    z-index: 2;
 }
 
 a:visited,
@@ -85,7 +120,7 @@ a{
     top: 45vh;
     text-align: right;
     line-height: 4rem;
-    animation: appear-from-left 1s .5s ease-in forwards;
+    animation: appear 1s .5s ease-in forwards;
     font-family: Gobold;
 }
 
@@ -97,14 +132,12 @@ a{
     font-size: 2rem;
 }
 
-@keyframes appear-from-left {
+@keyframes appear {
     0%{
         opacity: 0;
-        // transform: translateX(2rem);
     }
     100%{
         opacity: 1;
-        transform: translateX(0);
     }
 }
 
